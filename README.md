@@ -31,22 +31,29 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
+    <li>In your VM, go to the <b>Control Panel</b> and head to <b>Programs</b>. </li>
+    <li>Check under <b>Program and Features</b> click on <b>Turn Windows features on or off</b></li>
+    <li>Head over to the list and check the box for <b>Internet Information Services</b></li>
+    <li>Expand the list for <b>Internet Information Services</b>, navigate to <b>World Wide Web Services</b> then expand that to find <b>Application Development Features</b>, expand that and check the box for <b>CGI</b>.</li>
+    <li>Before closing, make sure the boxes under <b>Common HTTP Features</b> in World Wide Web Services are checked.</li>
   
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/3680976d-af20-4951-b39e-d0a6dda6dd9d)
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
 </p>
 <br />
 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/e63670a1-d000-4ff3-bf92-4f50e5c77f8c)
 
 <p>
-
+  
+<li> To double-check if everything is set correctly head to your VM browser and search 127.0.0.1. This should take you to the Internet Information Services webpage.</li>
+  
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
 </p>
 <br />
 
@@ -56,24 +63,53 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/9dff7247-4f16-4064-a23c-aea1e96ee5f9)
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/f9965e08-fd92-40d5-9456-661e2cde0770)
+
+- We are going to create a PHP folder in our C: Directory
+    
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/fe346893-eb84-4397-90f8-ebf4c2ed3279)
+
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/38117a00-b3cf-4da3-8656-acdc7c9b0c2a)
+
+- From here we then want to head to our downloads and extract our PHP file that we downloaded earlier to our C: directory and the file will be the PHP file we created recently.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/723537a0-48bc-412d-b6a2-3e9cf339555b)
+
+- Go ahead and also go back to downloads and install Microsoft Visual C++ which was one of the files we downloaded at the start. Open and install like normal.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/5e7e92b2-38d9-403f-ab3a-368ccfc6c409)
 
+- After that finishes downloading we can also start to download the MYSQL server. We want to make sure we have the "Launch Instance Configuration Wizard" box checked. We also will have a standard Configuration selected as well. 
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/ad9e2c54-a2a1-4223-a18d-3a18a155d744)
+
+- make sure to remember your sign-in. While it's not best to write passwords down since this is a lab I used the notepad.
+    - For our Username I set it as "root" and for our password, I set it as "Password1234" which are both easy to remember, feel free to put whatever works best for you.
+      
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/069f1143-040b-467a-b2e2-c356951ac92b)
+
+- Once that is finished we will then search IIS and select run as admin
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/0872e2fa-366f-4435-b896-191394c018ef)
+
+- Click on php rewrite
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/71e08883-fe31-401c-9f38-8569da98b539)
+
+- Once open press register new php then select the three dots
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/c123e4aa-891d-4d5a-9424-39f3f625a1c7)
 
+- From there we will head to this PC, then our C drive, and next our php folder. Once in the folder, we will select php-cgi. We have now selected a new path for our application.
+- 
 ![Screenshot_2023-10-22_094131](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/27d67334-71c9-4856-a0eb-a153d90b0ff9)
+
+- 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a408ea8c-4375-4000-960a-f2798e49e9ab)
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/9e1aab41-5bb6-4d5d-a8ac-5abdd51f87c2)
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/bfbb0fa0-5931-4be2-a469-a3d10decfceb)
