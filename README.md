@@ -106,40 +106,84 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/c123e4aa-891d-4d5a-9424-39f3f625a1c7)
 
 - From there we will head to this PC, then our C drive, and next our php folder. Once in the folder, we will select php-cgi. We have now selected a new path for our application.
-- 
+  
 ![Screenshot_2023-10-22_094131](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/27d67334-71c9-4856-a0eb-a153d90b0ff9)
 
-- 
+- After what I like to do is restart the web server. Head back to our Web server then on the far right press restart. We do this to make sure our new path is in place.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a408ea8c-4375-4000-960a-f2798e49e9ab)
+
+- For this part, we want to open two tabs of our file explorer. In one head to our OS Ticket download. In the other go to this pc, C drive, inetpub, then wwwroot. We are going to take our uploads file from OS ticket and drop it into wwwroot folder
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/9e1aab41-5bb6-4d5d-a8ac-5abdd51f87c2)
+
+- We then want to rename our Uploads folder to "osTicket"
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/bfbb0fa0-5931-4be2-a469-a3d10decfceb)
+
+- We can then open IIS as and admin again, then select on the left sites, Default web site, then select the osTicket folder. In this folder on the far right we want to click on the Browse *80 folder
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/2e5464ec-b232-4c70-91e7-501e4e51cb5e)
+
+- We now should be taken to the osTicket Install webpage.
+  - You should notice we have a few red Xs. We will be turning it into green check marks. So we can head back over to ISS to fix those.
+    
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/0b5c1dc8-295a-48b4-adaa-01d0645a84b8)
+
+- Once back in ISS we can head back to our osTicket folder, head to php manager then select at the bottom Enable or disable an extension
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a5681af2-2146-4403-b30a-dbfca37388e0)
+
+- Go ahead and enable these settings. After if you refresh the osTicket Web page those Xs should turn to green check marks!
+    - Enable: php_imap.dll
+    - Enable: php_intl.dll
+    - Enable: php_opcache.dl
+      
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/f3f4602a-b265-44b1-8a21-9fc4f0fb7d34)
+
+- We also want to change a file name in our wwwroot folder. Head to this pc, C drive, Inetpub, wwwroot, osTicket, include, Then scroll down till you see a file called ost-sampleconfig.php. We want to change this to say "ost-config.php"
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a3ceaf0a-7de1-41d9-baa1-0cc12e85cf92)
+
+- Once finished we want to make sure the permissions on this file are set to everyone. So right-click the file, head to properties, then to security. Once on this page, we can head to advanced and then disable inheritance
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/b79fcfa7-9309-4f76-9548-aa6e40f48355)
+
+- A new pop-up should appear, we then want to press Remove all Inherited Permissions
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/96bb8782-6373-4671-80ac-232c1c805bf0)
+
+- After disabling we can press add, then we want to press select a principle. Here we can type "everyone" check names then press okay. This has given everyone on this computer full access to this file.
+    - Also press full control on the basic permissions page when prompted. Now head back to osTicket webpage and press continue.
 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/f5bf2612-ef73-4f75-a45f-a4d313b5abd5)
 
+- Feel free to fill out the information. Make sure you remember it as we will need it later on. I wrote mine down on a notepad. The email doesn't matter much just put something simple and easy to remember.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/ee0ba691-c2e2-4bf2-94c7-931f346a07df)
 
+- To set up our database on osTicket we will head back to our downloads page and download HeidiSQL, and install it like normal.
 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/0d5a3a78-51d1-42e8-87a5-9db2a07d8af8)
 
-
+- Once Heidi opens we will press new at the bottom left, then enter whatever password you used for your osTicket setup or a password you will remember. After entering username and password click open at the bottom.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a91d2e00-b955-4ea9-8439-13610b220de3)
+
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a9d76de8-17c2-4296-942c-b78f40acd716)
 
+- Within Heidi what we need to do is create a new database. So we can right-click under the test data base and select new then database. We can name this new database osTicket
 
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/32eff2a3-fa1b-4562-9408-37596e3c21ff)
 
-
+- Now heading back to our osTicket webpage we will enter our SQL username and password which we saved from before. For the MySQL Database section, we will put the database we just created called osTicket. 
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/a59e05dc-86a2-467d-9ab4-4b493a3b5430)
 
+- Then press install, if everything is correct you should see this page that says Congratulations.
+  
 ![image](https://github.com/JosiahAllen03/osticket-prereqs/assets/147882549/7930aa0b-91e9-4796-8230-712480d695dc)
 
-
+- This link should take you to the admin sign-on page which you should now be able to sign into. http://localhost/osTicket/scp/login.php
 
 
