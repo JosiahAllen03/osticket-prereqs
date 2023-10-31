@@ -22,16 +22,24 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Set up an Azure Virtual Machine (VM) environment (Windows 10 4 vCPUs Recommended) 
+- Install the files from this link on your Azure virtual machine http://tiny.cc/bl7dvz
+- Install Web Platform Installer
+- Install C++ Redistributable
+- Install MySQL and set up username and password
+      - For the username (root) and for the password (Password1234) This username and password is what I used during the lab.
+- Configure permissions and install osTicket
+
+
+  
 
 <h2>Installation Steps</h2>
 
 <p>
-    <li>In your VM, go to the <b>Control Panel</b> and head to <b>Programs</b>. </li>
+
+
+    
+ <li>In your VM, go to the <b>Control Panel</b> and head to <b>Programs</b>. </li>
     <li>Check under <b>Program and Features</b> click on <b>Turn Windows features on or off</b></li>
     <li>Head over to the list and check the box for <b>Internet Information Services</b></li>
     <li>Expand the list for <b>Internet Information Services</b>, navigate to <b>World Wide Web Services</b> then expand that to find <b>Application Development Features</b>, expand that and check the box for <b>CGI</b>.</li>
